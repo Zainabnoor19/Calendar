@@ -1,0 +1,88 @@
+body{
+    background-color: #fdf6e3;
+    color: #3d3d3b;
+    overflow-x: hidden;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(190, 74, 74);
+    text-shadow: 0px 1px 5px rgb(105, 98, 98);
+}
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+table{
+    border: 1px solid #c08261;
+    box-shadow: 2px 2px 5px #e29c76;
+    min-width: 180px;
+    max-height: 100px; 
+    border-radius: 15px;
+}
+td{
+    padding: 5px;
+    text-align: center;
+}
+.month td{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #aa7659;
+    font-weight: bold;
+}
+.days th{
+    border-bottom: 2px solid #aa7659;
+
+}
+span{
+    color: #927f7fad;
+}
+.row {
+    padding: 0px 25px 0px 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns */
+    gap: 6px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .row {
+        grid-template-columns: repeat(6, 1fr); /* Larger screens: 6 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columns */
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        grid-template-columns: 1fr; /* Mobile: 1 column */
+    }
+}
+
+@media (max-width: 1350px){
+     html, body {
+    font-size: 14px;
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+
+    .row{
+        flex-direction: column;
+    }
+}
